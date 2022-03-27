@@ -1,0 +1,46 @@
+.navbar {
+  margin-left: 64px;
+}
+
+.navbar__list {
+  @include flex(center, space-between);
+  @include list-nostyle;
+}
+
+.navbar__item~.navbar__item {
+  margin-left: 40px;
+}
+
+.navbar__link {
+  @include linkStyle(none, 15px, 18px, $normal-blue);
+  font-weight: 700;
+  opacity: 0.7;
+  transition: all 1s ease;
+
+  &:hover {
+    color: #000000;
+    font-weight: 900;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.navbar__link:hover {}
+
+@include breakpoint-down(650px) {
+  .navbar {
+    margin-left: 50px;
+  }
+
+  .navbar__item~.navbar__item {
+    margin-left: 20px;
+  }
+}
+
+@include breakpoint-down(595px) {
+  .navbar {
+    display: none;
+  }
+}

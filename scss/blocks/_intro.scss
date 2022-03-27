@@ -1,0 +1,115 @@
+.intro__inner {
+  @include flex(center, space-between);
+}
+
+.intro__content {
+  max-width: 546px;
+}
+
+.intro__heading {
+  margin-bottom: 21px;
+  font-family: "DM Serif Display";
+  font-size: 72px;
+  line-height: 72px;
+  color: $normal-blue;
+  letter-spacing: -0.553846px;
+}
+
+.site__form {
+  margin-bottom: 16px;
+  @include flex(center, space-between);
+  max-width: 445px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background-color: $water-white;
+}
+
+.site__form-input {
+  border: none;
+  padding-left: 25px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: $normal-blue;
+  opacity: 0.5;
+}
+
+.site__form-input:focus {
+  outline: none;
+  border: none;
+}
+
+.site__form-btn {
+  padding: 15px 25px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: $water-white;
+  border: transparent;
+  background-color: $dark-pink;
+  border-radius: 24px;
+  transition: background-color, 0.5s ease;
+  letter-spacing: -0.115385px;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    background-color: $light-pink;
+  }
+}
+
+.site__form-label {
+  margin-left: 25px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $light-blue;
+}
+
+.site__form-label--span {
+  font-weight: 700;
+}
+
+@include breakpoint-down(891px) {
+  .intro__heading {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+@include breakpoint-down(865px) {
+  .intro__inner {
+    flex-direction: column-reverse;
+  }
+
+  .intro__content {
+    margin-bottom: 99px;
+  }
+}
+
+@include breakpoint-down(532px) {
+  .intro__content {
+    text-align: center;
+  }
+
+  .intro__heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .site__form {
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .site__form-input {
+    margin-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 445px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    background-color: $water-white;
+  }
+}

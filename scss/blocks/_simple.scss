@@ -1,0 +1,119 @@
+.simple {
+  background-image: url("../../img/bg-img-hero.png");
+  background-repeat: no-repeat;
+  background-size: 780px 780px;
+  background-position: calc(50% - -824px) 4px;
+  position: relative;
+  padding: 100px;
+}
+
+.simple__inner {
+  @include flex(center, flex-start);
+}
+
+.simple__content {
+  margin-right: 150px;
+  max-width: 445px;
+}
+
+.simple__heading {
+  margin-bottom: 24px;
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.369231px;
+  color: $normal-blue;
+}
+
+.simple__text {
+  font-size: 15px;
+  line-height: 28px;
+  color: $light-blue;
+}
+
+.simple__img-big {
+  display: none;
+  width: 520px;
+  height: 480px;
+}
+
+.simple__box-imgs {
+  position: relative;
+  max-width: 570px;
+  @include flex(center, space-between);
+}
+
+.simple__img-first {
+  width: 419px;
+  height: 660px;
+}
+
+.simple__img-second {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  width: 419px;
+  height: 660px;
+}
+
+@include breakpoint-down(1120px) {
+  .simple__content {
+    margin-right: 50px;
+  }
+}
+
+@include breakpoint-down(1020px) {
+  .simple__content {
+    margin: 0;
+  }
+}
+
+@include breakpoint-down(970px) {
+  .simple__inner {
+    flex-direction: column-reverse;
+  }
+
+  .simple__content {
+    max-width: 573px;
+    text-align: center;
+  }
+
+  .simple__box-imgs {
+    display: none;
+  }
+
+  .simple__img-responsive {
+    display: block;
+  }
+}
+
+@include breakpoint-down(550px) {
+  .simple__content {
+    max-width: 673px;
+    text-align: center;
+  }
+
+  .simple__heading {
+    max-width: 400px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@include breakpoint-down(480px) {
+  .simple__content {
+    width: 350px;
+  }
+
+  .simple__img-responsive {
+    width: 370px;
+    height: 320px;
+  }
+}
+
+@include breakpoint-down(400px) {
+  .simple__content {
+    width: 300px;
+  }
+}

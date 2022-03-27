@@ -1,0 +1,100 @@
+.jobs__inner {
+  margin-bottom: 96px;
+}
+
+.jobs__list {
+  @include list-nostyle;
+  @include flex(center, space-between);
+}
+
+.jobs__item {
+  max-width: 350px;
+  text-align: center;
+  transition: 500ms;
+}
+
+.jobs__item:hover {
+  box-shadow: 2px 4px 10px grey;
+  transform: scale(1.1);
+}
+
+.job--first::before {
+  margin-bottom: 32px;
+  display: inline-block;
+  width: 106px;
+  height: 106px;
+  background-image: url("../../img/finances.png");
+  background-repeat: no-repeat;
+  background-size: 106px 106px;
+  content: "";
+}
+
+.jobs__heading {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.138462px;
+  color: $normal-blue;
+}
+
+.jobs__text {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: $light-blue;
+}
+
+
+.job--second::before {
+  margin-bottom: 32px;
+  display: inline-block;
+  width: 106px;
+  height: 106px;
+  background-image: url("../../img/banking.png");
+  background-repeat: no-repeat;
+  background-size: 106px 106px;
+  content: "";
+}
+
+.job--third::before {
+  margin-bottom: 32px;
+  display: inline-block;
+  width: 106px;
+  height: 106px;
+  background-image: url("../../img/consumer.png");
+  background-repeat: no-repeat;
+  background-size: 106px 106px;
+  content: "";
+}
+
+@include breakpoint-down(1070px) {
+  .jobs__item {
+    max-width: 300px;
+  }
+}
+
+@include breakpoint-down(970px) {
+  .jobs__item {
+    max-width: 250px;
+  }
+}
+
+@include breakpoint-down(800px) {
+  .jobs__item {
+    max-width: 223px;
+  }
+}
+
+@include breakpoint-down(720px) {
+  .jobs__list {
+    flex-direction: column;
+  }
+
+  .jobs__item~.jobs__item {
+    margin-top: 48px;
+  }
+
+  .jobs__item {
+    max-width: 500px;
+  }
+}

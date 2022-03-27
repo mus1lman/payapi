@@ -1,0 +1,86 @@
+// ============   EASY TO IMPLEMENT   ===============
+
+.implement__inner {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  @include flex(center, space-between);
+}
+
+.implement__img {
+  width: 604px;
+  height: 444px;
+}
+
+.implement__content {
+  max-width: 445px;
+}
+
+.implement__heading {
+  margin-bottom: 24px;
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.369231px;
+  color: $normal-blue;
+}
+
+.implement__text {
+  font-size: 15px;
+  line-height: 28px;
+  color: $light-blue;
+}
+
+@include breakpoint-down(950px) {
+  .implement__inner {
+    flex-direction: column;
+  }
+
+  .implement__content {
+    max-width: 700px;
+    text-align: center;
+
+  }
+}
+
+@include breakpoint-down(768px) {
+  .implement__inner {
+    margin-right: auto;
+    margin-left: auto;
+    transition: 1s;
+  }
+
+  .implement__img {
+    width: 552px;
+    height: 410px;
+    transition: 1s;
+  }
+
+  .implement__img:hover {
+    transform: scale(1.4);
+  }
+
+  .implement__content {
+    max-width: 700px;
+    text-align: center;
+  }
+}
+
+@include breakpoint-down(500px) {
+  .implement__img {
+    width: 450px;
+    height: 320px;
+  }
+
+  .implement__heading {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@include breakpoint-down(400px) {
+  .implement__img {
+    width: 350px;
+    height: 240px;
+  }
+}

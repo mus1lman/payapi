@@ -1,0 +1,25 @@
+@mixin flex($align-items, $just-cont) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $just-cont;
+}
+
+@mixin linkStyle($tex-dec, $font-size, $line-height, $color) {
+  text-decoration: $tex-dec;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin list-nostyle() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Responsive
+@mixin breakpoint-down($screen-width) {
+  @media only screen and (max-width: $screen-width) {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+.site-logo {
+  display: inline-block;
+  &:hover .site-logo__img {
+    transform: scale(1.2);
+  }
+}
+
+.site-logo__img {
+  display: block;
+  width: 135px;
+  height: 38px;
+  transition: transform 0.5s ease;
+}

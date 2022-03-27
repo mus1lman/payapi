@@ -1,0 +1,70 @@
+body {
+  background-image: url("../img/bg-img-hero.png");
+  background-repeat: no-repeat;
+  background-size: 780px 780px;
+  background-position: calc(50% - -455px) -110px;
+}
+
+.header__inner {
+  margin-top: 40px;
+  margin-bottom: 74px;
+  @include flex(center, space-between);
+}
+
+.header__wrapper {
+  @include flex(center, space-between);
+  display: flex;
+  align-items: center;
+}
+
+.header__btn {
+  padding: 15px 25px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: $water-white;
+  border: transparent;
+  background-color: $dark-pink;
+  border-radius: 25px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    background-color: $light-pink;
+  }
+}
+
+.header__hamburger-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
+.header__hamburger-img {
+  width: 28px;
+  height: 17px;
+}
+
+@include breakpoint-down(768px) {
+  body {
+    background-position: calc(50% - 10px) -285px;
+  }
+}
+
+@include breakpoint-down(650px) {
+  .header__inner {
+    margin-bottom: 48px;
+  }
+}
+
+@include breakpoint-down(595px) {
+  .header__btn {
+    display: none;
+  }
+
+  .header__hamburger-btn {
+    display: block;
+  }
+}
